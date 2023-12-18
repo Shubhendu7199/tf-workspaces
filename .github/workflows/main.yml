@@ -28,7 +28,7 @@ jobs:
       run: terraform apply -auto-approve ./module
 
     - name: Set up PowerShell
-      uses: actions/setup-powershell@v2
+      uses: PowerShell/setup-powershell@v0
       with:
         pwsh-version: '7.x'
 
