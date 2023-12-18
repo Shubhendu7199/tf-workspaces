@@ -1,5 +1,5 @@
 $workspaces = Invoke-RestMethod -Uri "https://app.terraform.io/api/v2/organizations/Shubhendu/workspaces" -Headers @{
-    Authorization = "Bearer C4Ahzbs3jknS9A.atlasv1.JYAZMDy3Q6sPznovdy9F0asnXUTrcKR5QXF3eyK5y2HOJeznKh42osevtvbHhxYdWe4"
+    Authorization = "Bearer XXXXXXXXXXXXXXXXXXXXXXXX"
 }
 
 foreach ($workspace in $workspaces.data) {
@@ -7,7 +7,7 @@ foreach ($workspace in $workspaces.data) {
     $workspaceId = $workspace.id
 
     $variables = Invoke-RestMethod -Uri "https://app.terraform.io/api/v2/workspaces/$workspaceId/vars" -Headers @{
-        Authorization = "Bearer C4Ahzbs3jknS9A.atlasv1.JYAZMDy3Q6sPznovdy9F0asnXUTrcKR5QXF3eyK5y2HOJeznKh42osevtvbHhxYdWe4"
+        Authorization = "Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
 
     $azureProviderAuthVariable = $variables.data | Where-Object { $_.attributes.key -eq 'TFC_AZURE_PROVIDER_AUTH' }
