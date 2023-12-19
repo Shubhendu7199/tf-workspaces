@@ -1,9 +1,9 @@
-# terraform {
-#   cloud {
-#     organization = "Shubhendu"
+terraform {
+  cloud {
+    organization = "Shubhendu"
 
-#     workspaces {
-#       name = "tf-workspaces-mgmt"
-#     }
-#   }
-# }
+    workspaces {
+      name = "tf-workspaces-mgmt"
+    }
+  }
+}
